@@ -45,7 +45,7 @@ The provided German Traffic Sign Dataset consist 34799 traning images, 4410 vali
 Below are three examples from the training dataset:  
 ![2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/2.png)
 ![12](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/12.png)
-![26](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/26.png)
+![26](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/26.png)  
 
 Below are histograms for different classes in training, validation and testing data set:  
 ![trainhist](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/trainhist.png)
