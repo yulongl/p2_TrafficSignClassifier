@@ -4,7 +4,7 @@
 
 ### Yulong Li
 
-
+  
 
 ---
 
@@ -16,8 +16,10 @@ The goals / steps of this project are the following:
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
+* Visualize and analyze feature maps
 * Summarize the results with a written report
 
+   
 
 [//]: # (Image References)
 
@@ -29,11 +31,22 @@ The goals / steps of this project are the following:
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
-
+ 
+---
 ## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+---
+### Dataset Exploration
+##### Dataset Summary
+The provided German Traffic Sign Dataset consist 34799 traning images, 4410 validation images and 12630 testing images, which contain 43 different classes. All images are 32x32 3 channel RGB. The data are provided in pickle format, which contains four pairs of key and value: feature (raw pixel data of images), label, image size and traffic sign object coordinates.
+
+Below are three examples from the training dataset:
+
+
+Below are histograms for different classes in training, validation and testing data set: 
 
 ---
+
+
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
