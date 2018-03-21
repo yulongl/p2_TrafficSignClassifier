@@ -34,43 +34,27 @@ The goals / steps of this project are the following:
  
 ---
 ## Rubric Points
+This writeup will include all the [Rubric Points](https://review.udacity.com/#!/rubrics/481/view).
+Here is a link to my [project code](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/Traffic_Sign_Classifier.ipynb)
+
 ---
 ### Dataset Exploration
 ##### Dataset Summary
 The provided German Traffic Sign Dataset consist 34799 traning images, 4410 validation images and 12630 testing images, which contain 43 different classes. All images are 32x32 3 channel RGB. The data are provided in pickle format, which contains four pairs of key and value: feature (raw pixel data of images), label, image size and traffic sign object coordinates.
 
 Below are three examples from the training dataset:
-
+![2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/2.png)
 
 Below are histograms for different classes in training, validation and testing data set: 
 
 ---
 
 
-### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-### Data Set Summary & Exploration
 
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
-
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
-
-#### 2. Include an exploratory visualization of the dataset.
-
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
-
-![alt text][image1]
 
 ### Design and Test a Model Architecture
 
