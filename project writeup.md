@@ -19,18 +19,6 @@ The goals / steps of this project are the following:
 * Visualize and analyze feature maps
 * Summarize the results with a written report
 
-   
-
-[//]: # (Image References)
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
  
 ---
 ## Rubric Points
@@ -51,6 +39,7 @@ Below are histograms for different classes in training, validation and testing d
 ![trainhist](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/trainhist.png)
 ![validhist](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/validhist.png)
 ![testhist](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/testhist.png)  
+
 ---
 
 ### Design and Test a Model Architecture
