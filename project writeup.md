@@ -34,7 +34,7 @@ The goals / steps of this project are the following:
  
 ---
 ## Rubric Points
-This writeup will include all the [Rubric Points](https://review.udacity.com/#!/rubrics/481/view).
+This writeup will include all the [Rubric Points](https://review.udacity.com/#!/rubrics/481/view).  
 Here is a link to my [project code](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ---
@@ -42,10 +42,10 @@ Here is a link to my [project code](https://github.com/yulongl/p2_TrafficSignCla
 ##### Dataset Summary
 The provided German Traffic Sign Dataset consist 34799 traning images, 4410 validation images and 12630 testing images, which contain 43 different classes. All images are 32x32 3 channel RGB. The data are provided in pickle format, which contains four pairs of key and value: feature (raw pixel data of images), label, image size and traffic sign object coordinates.
 
-Below are three examples from the training dataset:
+Below are three examples from the training dataset:  
 ![2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/2.png)
 
-Below are histograms for different classes in training, validation and testing data set: 
+Below are histograms for different classes in training, validation and testing data set:  
 
 ---
 
