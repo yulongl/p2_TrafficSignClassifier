@@ -51,21 +51,37 @@ I decided not to convert the images to grayscale because I think color informati
 
 I normalized the image data because it can help to avoid very big positive or negative values after the convolution and it's easier for optimizer tp work.  
 
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### Model Architecture
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 5x5x3x6     	| 1x1 stride, VALID padding, outputs 28x28x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Convolution 5x5x6x16	    | 1x1 stride, VALID padding, outputs 24x24x16	|
+| RELU					|												|
+| Convolution 5x5x16x26	    | 1x1 stride, VALID padding, outputs 20x20x26	|
+| RELU					|												|
+| Convolution 5x5x26x36	    | 1x1 stride, VALID padding, outputs 16x16x36	|
+| RELU					|												|
+| Convolution 5x5x36x36	    | 1x1 stride, VALID padding, outputs 12x12x36	|
+| RELU					|												|
+| Maxpooling 2x2				  	|	2x2	stride, SAME padding, outputs 6x6x36		|
+| Fully connected	1296	| Outputs 666        									|
+| RELU					|												|
+| Dropout				|	0.75								  |
+| Fully connected	666 	| Outputs 396        									|
+| RELU					|												|
+| Dropout				|	0.75						  		|
+| Fully connected	396	| Outputs 128          									|
+| RELU					|												|
+| Dropout				|	0.75						  		|
+| Fully connected	128	| Outputs 43          									|
+| RELU					|												|
+| Softmax				|      									|
+
  
 
 
