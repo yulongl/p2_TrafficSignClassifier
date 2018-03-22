@@ -81,15 +81,27 @@ My final model consisted of the following layers:
 | Fully connected	128	| Outputs 43          									|
 | RELU					|												|
 | Softmax				|      									|
+| Cross entropy	|      									|
+| Back prop			|      									|
 
- 
 
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### Model Training
 
-To train the model, I used an ....
+To train the model, I used the TensorFlow AdamOptimizer.  
+```
+EPOCHS = 100
+BATCH_SIZE = 128
+mu = 0
+sigma = 0.1
+rate = 0.0005
+```
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### Solution Approach
+
+First I tried the LeNet architecture from previous class but the result was below the 93% requirement. So next I tried another famous architecture AlexNet but a simplified version and achived 94%~95% validation accuracy.  
+
+However, the image size in the provided dataset is only 32x32x3. Over use of maxpooling will lose too many pixels and too much information contained in those pixels. So eventually, I used convolution with VALID padding to reduce feature map size and only used maxpooling once after 5 convolution layers. After that I got a relatively large fully connected layer, to accelarate training and prevent overfit, I added the dropout function after each fully connected layer.
 
 My final model results were:
 * training set accuracy of ?
