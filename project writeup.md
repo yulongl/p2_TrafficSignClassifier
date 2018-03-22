@@ -114,8 +114,19 @@ My final model results were:
 
 #### Acquiring New Images
 
-I think five images is not enough to evaluate the system so I got 11. Here are they:
+I think five images is not enough to evaluate the system so I got 11. Here are they:  
 
+![2](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/2.jpg)
+![3](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/3.jpg)
+![7](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/7.jpg)
+![7_2](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/7_2.jpg)
+![14](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/14.jpg)
+![17](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/17.jpg)
+![23](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/23.jpg)
+![25](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/25.jpg)
+![28](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/28.jpg)
+![31](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/31.jpg)
+![35](https://github.com/yulongl/p2_TrafficSignClassifier/tree/master/image_from_google/35.jpg)
 
 
 The first image might be difficult to classify because ...
