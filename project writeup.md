@@ -101,34 +101,22 @@ rate = 0.0005
 
 First I tried the LeNet architecture from previous class but the result was below the 93% requirement. So next I tried another famous architecture AlexNet but a simplified version and achived 94%~95% validation accuracy.  
 
-However, the image size in the provided dataset is only 32x32x3. Over use of maxpooling will lose too many pixels and too much information contained in those pixels. So eventually, I used convolution with VALID padding to reduce feature map size and only used maxpooling once after 5 convolution layers. After that I got a relatively large fully connected layer, to accelarate training and prevent overfit, I added the dropout function after each fully connected layer.
+However, the image size in the provided dataset is only 32x32x3. And the images are very vague. We already lost a lot of information by downsizing the original images. And the over use of maxpooling will even lose more pixels and more information contained in those pixels. So eventually, I used convolution with VALID padding to reduce feature map size and only used maxpooling once after 5 convolution layers. After that I got a relatively large fully connected layer. To accelarate training and prevent overfit, I added the dropout function after each fully connected layer.
 
 My final model results were:
 * training set accuracy of ?
 * validation set accuracy of ? 
 * test set accuracy of ?
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
-
+---
 ### Test a Model on New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### Acquiring New Images
 
-Here are five German traffic signs that I found on the web:
+I think five images is not enough to evaluate the system so I got 11. Here are they:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+
 
 The first image might be difficult to classify because ...
 
