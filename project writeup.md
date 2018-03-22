@@ -59,15 +59,15 @@ My final model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
 | Convolution 5x5x3x6     	| 1x1 stride, VALID padding, outputs 28x28x6 	|
-| RELU					|												|
+| Sigmoid					|												|
 | Convolution 5x5x6x16	    | 1x1 stride, VALID padding, outputs 24x24x16	|
-| RELU					|												|
+| Sigmoid					|												|
 | Convolution 5x5x16x26	    | 1x1 stride, VALID padding, outputs 20x20x26	|
-| RELU					|												|
+| Sigmoid					|												|
 | Convolution 5x5x26x36	    | 1x1 stride, VALID padding, outputs 16x16x36	|
-| RELU					|												|
+| Sigmoid					|												|
 | Convolution 5x5x36x36	    | 1x1 stride, VALID padding, outputs 12x12x36	|
-| RELU					|												|
+| Sigmoid					|												|
 | Maxpooling 2x2				  	|	2x2	stride, SAME padding, outputs 6x6x36		|
 | Fully connected	1296	| Outputs 666        									|
 | RELU					|												|
