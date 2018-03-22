@@ -101,7 +101,10 @@ rate = 0.0005
 
 First I tried the LeNet architecture from previous class but the result was below the 93% requirement. So next I tried another famous architecture AlexNet but a simplified version and achived 94%~95% validation accuracy.  
 
-However, the image size in the provided dataset is only 32x32x3. And the images are very vague. We already lost a lot of information by downsizing the original images. And the over use of maxpooling will even lose more pixels and more information contained in those pixels. So eventually, I used convolution with VALID padding to reduce feature map size and only used maxpooling once after 5 convolution layers. After that I got a relatively large fully connected layer. To accelarate training and prevent overfit, I added the dropout function after each fully connected layer.
+However, the image size in the provided dataset is only 32x32x3. And the images are very vague. We already lost a lot of information by downsizing the original images. And the over use of maxpooling will even lose more pixels and more information contained in those pixels. So eventually, I used convolution with VALID padding to reduce feature map size and only used maxpooling once after 5 convolution layers. After that I got a relatively large fully connected layer. To accelarate training and to prevent overfitting, I added the dropout function after each fully connected layer.
+
+Another approach I've made is, I used sigmoid as the activation function instead of RELU. Because after step 4 visualization of the feature maps, I found too many completely black feature maps, which means for these maps, all the logits were negative, which means all those filters were dead filters. I even tried some very small learning rates and small sigma for weight initialization but still getting almost 50% of dead filters. But what is weird is, even if 80% of the filters were dead filters, the system still gave out a 98% validation accuracy.  
+
 
 My final model results were:
 * training set accuracy of ?
@@ -129,19 +132,28 @@ I think five images is not enough to evaluate the system so I got 11. Here are t
 ![35](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/image_from_google/35.png)
 
 
-The first image might be difficult to classify because ...
+The 'slippery road' sign image probably is the most difficault to classify because it's dark and the pattern is complicated. And the 'child crossing' and 'road work' also have complicated patterns. The '100 speed limit' is a little tricky because it's probably not a Germany sign - the read circle is thinner.  
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+
+#### Performance on New Images
+
+2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed limit (50km/h)      		|    									| 
+| Speed limit (60km/h)     			|  										|
+| Speed limit (100km/h) 1				| 										|
+| Speed limit (100km/h) 2    		| 					 	  			|
+| Stop		                    	|       							|
+| No entry			                |       							|
+| Slippery road		             	|       							|
+| Road work			                |       							|
+| Children crossing			        |       							|
+| Wild animals crossing		     	|       							|
+| Ahead only		               	|       							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
