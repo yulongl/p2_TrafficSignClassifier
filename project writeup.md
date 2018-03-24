@@ -51,6 +51,21 @@ I decided not to convert the images to grayscale because I think color informati
 
 I normalized the image data because it can help to avoid very big positive or negative values after the convolution and it's easier for optimizer tp work.  
 
+I also augument the imaghe set using imgaug package.  
+
+```
+from imgaug import augmenters as iaa
+
+seq = iaa.Sequential([
+    iaa.Crop(px=(0, 6)), # crop images from each side by 0 to 16px (randomly chosen)
+    iaa.Add((-10, 10)), 
+    iaa.Sharpen(alpha = 1.00) 
+])
+```
+
+The augumented images were added to the original dataset so the number of training iamges became 69598.  
+
+
 #### Model Architecture
 
 My final model consisted of the following layers:
@@ -71,13 +86,13 @@ My final model consisted of the following layers:
 | Maxpooling 2x2				  	|	2x2	stride, SAME padding, outputs 6x6x36		|
 | Fully connected	1296	| Outputs 666        									|
 | RELU					|												|
-| Dropout				|	0.75								  |
+| Dropout				|	0.5						  	    |
 | Fully connected	666 	| Outputs 396        									|
 | RELU					|												|
-| Dropout				|	0.75						  		|
+| Dropout				|	0.5						  	 	  |
 | Fully connected	396	| Outputs 128          									|
 | RELU					|												|
-| Dropout				|	0.75						  		|
+| Dropout				|	0.5						  		  |
 | Fully connected	128	| Outputs 43          									|
 | RELU					|												|
 | Softmax				|      									|
