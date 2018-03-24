@@ -63,6 +63,13 @@ seq = iaa.Sequential([
 ])
 ```
 
+Below are afew examples of augumented images:  
+
+![2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/2.png)
+![12](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/12.png)
+![26](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/26.png)  
+
+
 The augumented images were added to the original dataset so the number of training iamges became 69598.  
 
 
