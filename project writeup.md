@@ -225,8 +225,8 @@ For image 23.jpg (Slippery road):
 
 ![mp2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/mp2.PNG)  
 
-From the feature maps above, we can see the lower level layers still keeps the whole traffic sign's outline. With the layers go deeper and deeper, the patterns got more abstract. But even from the maxpooling layer, which is the last layer below fully connected layer, we can still see the bar pattern extracted from the 'no entry' sign.  
+From the feature maps above, we can see the lower level layers still keep the whole traffic sign's outline. With the layers going deeper and deeper, the patterns became more abstract. But even from the maxpooling layer, which is the last layer before fully connected layer, we can still see the bar pattern extracted from the 'no entry' sign.  
 
-One of the advantage of drawing feature maps out is to avoid dead filters. I was using RELU activation for all the convolution layers, but then when I came through this step 4, I found more than a half of the feature maps are black out, which indicates that all the logits values after convolution were negative. So the feature maps did not contain any useful information. That's why I switched to sigmoid.
+One of the advantage of drawing feature maps out is to avoid dead filters. I was using RELU activation for all the convolution layers, but then when I came through this step 4, I found almost 80% to 90% the feature maps were blacked out, which indicates that all the logits values after convolution were negative. So the feature maps did not contain any useful information. That's why I switched to sigmoid.
 
 However, even I had all those dead filters with RELU, the validation accuracy reached above 98%, higher than my current sigmoid validation accuracy, around 97%, and I still cannot understand. So dear mentor/grader, could you help me with that?
