@@ -65,9 +65,9 @@ seq = iaa.Sequential([
 
 Below are afew examples of augumented images:  
 
-![2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/2.png)
-![12](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/12.png)
-![26](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/26.png)  
+![2_aug](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/2_aug.png)
+![9_aug](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/9_aug.png)
+![35_aug](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/35_aug.png)  
 
 
 The augumented images were added to the original dataset so the number of training iamges became 69598.  
@@ -129,9 +129,9 @@ Another approach I've made is, I used sigmoid as the activation function instead
 
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 1.000
+* validation set accuracy of 0.974
+* test set accuracy of 0.966
 
  
 ---
@@ -159,44 +159,57 @@ The 'slippery road' sign image probably is the most difficault to classify becau
 
 #### Performance on New Images
 
-2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
-
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Speed limit (50km/h)      		|    									| 
-| Speed limit (60km/h)     			|  										|
-| Speed limit (100km/h) 1				| 										|
-| Speed limit (100km/h) 2    		| 					 	  			|
-| Stop		                    	|       							|
-| No entry			                |       							|
-| Slippery road		             	|       							|
-| Road work			                |       							|
-| Children crossing			        |       							|
-| Wild animals crossing		     	|       							|
-| Ahead only		               	|       							|
+| Speed limit (50km/h)      		| Speed limit (60km/h)   									| 
+| Speed limit (60km/h)     			| Speed limit (60km/h) 										|
+| Speed limit (100km/h) 1				| Speed limit (100km/h)										|
+| Speed limit (100km/h) 2    		| Speed limit (100km/h)					 	  			|
+| Stop		                    	| Stop      							|
+| No entry			                | No entry      							|
+| Slippery road		             	| Slippery road      							|
+| Road work			                | Road work      							|
+| Children crossing			        | Children crossing      							|
+| Wild animals crossing		     	| Wild animals crossing      							|
+| Ahead only		               	| Ahead only      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 10 of the 11 traffic signs, which gives an accuracy of 90.9%. The accuracy on the new image set is lower than the given test images.
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### Model Certainty - Softmax Probabilities
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+The code for making predictions on my final model is located in the 16th cell of the Ipython notebook.  
+
+For image 14.jpg, 17.jpg, 25.jpg, 28.jpg, 3.jpg, 35.jpg, 7.jpg and 7_2.jpg, the probabilities of the correct prediction are all extremely closed to 1 - the second high probability is below 10^-9. These are all correct predictions.  
+
+For image 31.jpg, the probability of the correct prediction is 99.9%. The second high is around 10^-3.
+
+For image 2.jpg (Speed limit (50km/h)): 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .94         			| Speed limit (60km/h)   									| 
+| .04     				| Speed limit (80km/h) 										|
+| .02					| Speed limit (50km/h)											|
+| <10^-3	      			| Speed limit (30km/h)					 				|
+| <10^-4				    | Yield     							|
+
+For image 23.jpg (Slippery road): 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .45         			| Slippery road   									| 
+| .29     				| Dangerous curve to the right 										|
+| .22					| Bicycles crossing											|
+| .01	      			| Speed limit (60km/h)					 				|
+| .01				    | No passing     							|
 
 
-For the second image ... 
-
+---
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
