@@ -51,7 +51,7 @@ I decided not to convert the images to grayscale because I think color informati
 
 I normalized the image data because it can help to avoid very big positive or negative values after the convolution and it's easier for optimizer tp work.  
 
-I also augument the imaghe set using imgaug package.  
+I also augument the images using imgaug package.  
 
 ```
 from imgaug import augmenters as iaa
@@ -115,8 +115,9 @@ To train the model, I used the TensorFlow AdamOptimizer.
 EPOCHS = 100
 BATCH_SIZE = 128
 mu = 0
-sigma = 0.1
-rate = 0.0005
+sigma = 0.09
+rate = 0.0003
+dropout = 0.5
 ```
 
 #### Solution Approach
@@ -180,11 +181,10 @@ The model was able to correctly guess 10 of the 11 traffic signs, which gives an
 
 #### Model Certainty - Softmax Probabilities
 
-3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 16th cell of the Ipython notebook.  
 
-For image 14.jpg, 17.jpg, 25.jpg, 28.jpg, 3.jpg, 35.jpg, 7.jpg and 7_2.jpg, the probabilities of the correct prediction are all extremely closed to 1 - the second high probability is below 10^-9. These are all correct predictions.  
+For image 14.jpg, 17.jpg, 25.jpg, 28.jpg, 3.jpg, 35.jpg, 7.jpg and 7_2.jpg, the probabilities of the correct prediction are all extremely closed to 1 -- the second high probability is below 10^-9. These are all correct predictions.  
 
 For image 31.jpg, the probability of the correct prediction is 99.9%. The second high is around 10^-3.
 
@@ -211,6 +211,16 @@ For image 23.jpg (Slippery road):
 
 ---
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+#### Discussion about the feature maps visual output
 
+'No entry' sign 2nd convolution layer feature maps:  
 
+![c2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/c2.png)
+
+'No entry' sign 5th convolution layer feature maps:  
+
+![c5](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/c2.png)
+
+'No entry' sign maxpooling layer feature maps:  
+
+![mp2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/mp2.png)
