@@ -215,12 +215,12 @@ For image 23.jpg (Slippery road):
 
 'No entry' sign 2nd convolution layer feature maps:  
 
-![c2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/c2.png)
+![c2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/c2.png)  
 
 'No entry' sign 5th convolution layer feature maps:  
 
-![c5](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/c2.png)
+![c5](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/c5.png)  
 
 'No entry' sign maxpooling layer feature maps:  
 
-![mp2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/mp2.png)
+![mp2](https://github.com/yulongl/p2_TrafficSignClassifier/blob/master/writeup_image/mp2.png)  
